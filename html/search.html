@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Search
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/search.css">
+    <script src="../java/nav.js"></script>
+    <!--outside source icon-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!--slickjs-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        .input {
+            color: blue;
+        }
+    </style>    
+</head>
+
+<body>
+    
+    <header></header>
+        <h1 class="search_header">Search</h1>
+
+        <div class="select">
+            <form action="Buying_Detail.html" method="post">
+                <div class="city_select_box">
+                    <div class="contain">
+                        <label class="topic" for="Country">Country</label>
+                        <select style="width: 500px; height: 25px;" class='selector' id="Country" name="country">
+                            <option value="-country-" selected>-country-</option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <div class="contain">
+                        <label class="topic" for="City">City</label>
+                        <select style="width: 500px; height: 25px;" class='selector' id="City" name="city">
+                            <option value="-city-" selected>-city-</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="type_select">Select Types</label><br>
+                    <input type="checkbox" value="H"><span class="product_type">House</span>
+                    <input type="checkbox" value="T"><span class="product_type">Townhouse</span>
+                    <input type="checkbox" value="C"><span class="product_type">Condo</span>
+                    <input type="checkbox" value="HT"><span class="haunted"> Haunted</span>
+                    <br>
+                <label for="max_price">Max Price</label> 
+                <input type="text" id="max_price"><br>
+                <label for="min_price">Min Price</label>
+                <input type="text" id="min_price"><br>
+                <div class="grid">
+                    <label class="labeloption" for="rooms">Number of Rooms</label>
+                    <select id="rooms" name="num_room">
+                        <option value="-">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="labeloption">Option:<br>
+                    <input type="radio" name="buy_rent" value="Buy"> Buy
+                    <input type="radio" name="buy_rent" value="Rent"> Rent
+                    <input type="radio" name="buy_rent" value="Both"> Both
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>  
+    <footer></footer>
+</body>
+
+</html>

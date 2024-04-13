@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inclusive Sans", sans-serif;
+    background-image: url('../pic/bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 85px;
+    height: 65px;
+    padding-left: 20px;
+}
+
+.logo p {
+    padding-left: 20px;
+}
+
+nav {
+    width: 100%;
+    height: 40px;
+    padding: 20px 0px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.menu li {
+    padding-right: 60px;
+    font-size: 17px;
+
+}
+
+.menu li a, .logo a, footer a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.menu li a::before, .logo a ::before, footer a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.menu li a:hover:before, .logo a :hover:before,  footer a:hover:before{
+    width: 100%;
+    background: rgb(255, 255, 255);
+}
+
+.content {
+    background-color: aqua;
+}
+
+footer {
+    display: flex;
+    margin-top: auto;
+    justify-content: flex-end;
+    padding-right: 30px;
+    align-items: center;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    text-align: center;
+}

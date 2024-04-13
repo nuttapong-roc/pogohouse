@@ -1,0 +1,72 @@
+.search_header {
+    text-align: center;
+    color: aliceblue;
+}
+
+.select {
+    text-align: center;
+}
+
+
+.haunted {
+    font-family: ghas;
+    font-size: 24px ;
+    color: red;
+    text-shadow: 1px 1px black;
+    font-family: "Creepster", system-ui
+}
+input {
+    text-align: justify;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding: 15px; */
+}
+
+.labeloption {
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#rooms {
+    margin-top: 10px;
+}
+
+.city_select_box{
+    text-align: center;
+    padding-bottom: 30px;
+    
+}
+
+.product_type{
+    color: aqua;
+}
+
+label {
+    font-size: 24px;
+    color: aliceblue;
+    margin: 5px
+}
+
+.contain{   
+    display: inline-flex;
+    justify-content: center;  
+    align-items: center; 
+}
+
+.topic{
+    width: 90px;
+}
+.selector {
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+
+}

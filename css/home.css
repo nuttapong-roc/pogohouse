@@ -1,0 +1,10 @@
+.something
+{
+    display: flex;
+    margin-top: 20px;
+    background-color: pink;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    
+}

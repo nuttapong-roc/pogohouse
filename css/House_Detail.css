@@ -1,0 +1,76 @@
+img {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: auto;
+    grid-gap: 0.1em;
+    justify-content: center;
+    padding: 15px;
+}
+
+
+#img:hover {
+    opacity: 0.8;
+}
+
+.img1 {
+    grid-row: 1/5;
+    grid-column: 1/5;
+}
+
+#box {
+    background-color: rgb(209, 209, 209);
+}
+
+
+.box_detail {
+    display: grid;
+    grid-template-columns: repeat(6, 85px);
+    /* grid-template-rows: 100px; */
+    grid-gap: 0.5em;
+    justify-content: center;
+}
+
+.box8 {
+    grid-row: 1/8;
+    grid-column: 7/11;
+    width: 240px;
+    border-radius: 10px;
+  /* overflow: hidden; */
+}
+#Pprice{
+    color: green;
+}
+.detail {
+    background-color: #dedede;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: start;
+    position: absolute; 
+    width: 390px; 
+    height: 260px;
+    left: 34%;
+    z-index: 9999;
+}
+
+
+.user_img {
+    display: flex;
+    margin-left: 2px;
+}
+
+.box_in_user_img1 {
+    background-color: aqua;
+    margin: 10%;
+}
+
+.box_in_user_img2 {
+    background-color: rgb(234, 255, 0);
+    margin: 10%;
+}
+
