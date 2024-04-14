@@ -27,10 +27,10 @@
 <body>
     
     <header></header>
-        <h1 class="search_header">Search</h1>
-
-        <div class="select">
-            <form action="Buying_Detail.html" method="post">
+    
+    <div class="select">
+            <h1 class="search_header">Search</h1>
+            <form action="/Buying_listvs" method="POST">
                 <div class="city_select_box">
                     <div class="contain">
                         <label class="topic" for="Country">Country</label>
@@ -56,18 +56,7 @@
                 <input type="text" id="max_price"><br>
                 <label for="min_price">Min Price</label>
                 <input type="text" id="min_price"><br>
-                <div class="grid">
-                    <label class="labeloption" for="rooms">Number of Rooms</label>
-                    <select id="rooms" name="num_room">
-                        <option value="-">-</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div class="labeloption">Option:<br>
+                <div class="labeloption"id="brb">Option:<br>
                     <input type="radio" name="buy_rent" value="Buy"> Buy
                     <input type="radio" name="buy_rent" value="Rent"> Rent
                     <input type="radio" name="buy_rent" value="Both"> Both
