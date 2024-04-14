@@ -4,7 +4,7 @@ function writenav()
     const navHTML = `
         <link rel="stylesheet" href="../css/nav.css" />
         <div class="logo">
-            <a href="/Home"><img src="../pic/poggo-house.png"><p>Pogo house</p></a>
+            <a href="/Home"><img src="https://github.com/nuttapong-roc/pogohouse/blob/e2bbcb25d39cf5b1101fe735cd05aabd548d3a7e/poggo-house.png?raw=true"><p>Pogo house</p></a>
         </div>
         <ul class="menu">
             <li><a href="/Buying_list">Buy <ion-icon name="cash-outline"></ion-icon></a></li>
