@@ -11,6 +11,8 @@ img {
     grid-gap: 0.1em;
     justify-content: center;
     padding: 15px;
+    /* align-items: center; */
+    margin-top: 50px
 }
 
 
@@ -29,19 +31,17 @@ img {
 
 
 .box_detail {
-    display: grid;
-    grid-template-columns: repeat(6, 85px);
-    /* grid-template-rows: 100px; */
+    align-items: center;
+    display: flex;
     grid-gap: 0.5em;
     justify-content: center;
 }
 
 .box8 {
     grid-row: 1/8;
-    grid-column: 7/11;
     width: 240px;
     border-radius: 10px;
-  /* overflow: hidden; */
+    margin-left: 50px;
 }
 #Pprice{
     color: green;
@@ -51,10 +51,8 @@ img {
     padding: 10px;
     border-radius: 10px;
     text-align: start;
-    position: absolute; 
     width: 390px; 
     height: auto;
-    left: 34%;
     z-index: 9999;
 
 }
@@ -74,4 +72,3 @@ img {
     background-color: rgb(234, 255, 0);
     margin: 10%;
 }
-
