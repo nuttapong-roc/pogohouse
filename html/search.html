@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Search
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/search.css">
+    <script src="../java/nav.js"></script>
+    <!--outside source icon-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!--slickjs-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        .input {
+            color: blue;
+        }
+    </style>    
+</head>
+
+<body>
+    
+    <header></header>
+    
+    <div class="select">
+            <h1 class="search_header">Search</h1>
+            <form action="/Buying_list/" method="GET">
+                <div class="city_select_box">
+                    <div class="contain">
+                        <label class="topic" for="Country">Country</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="Country" name="country" placeholder="England">
+                    </div>
+                    <br><br>
+                    <div class="contain">
+                        <label class="topic" for="City">City</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="City" name="city" placeholder="London">
+                    </div>
+                </div>
+                <label for="type_select">Select Types</label><br>
+                    <input type="checkbox" value="H"name = cb><span class="product_type">House</span>
+                    <input type="checkbox" value="T"name = cb1><span class="product_type">Townhouse</span>
+                    <input type="checkbox" value="C"name = cb2><span class="product_type">Condo</span>
+                    <input type="checkbox" value="HT"name = cb3><span class="haunted"> Haunted</span>
+                    <br>
+                <label for="max_price">Max Price</label> 
+                <input type="text" id="max_price"name = max_price placeholder="100000"><br>
+                <label for="min_price">Min Price</label>
+                <input type="text" id="min_price"name = min_price placeholder="1"><br>
+                <div class="labeloption"id="brb">Option:<br>
+                    <input type="radio" name="buy_rent" value="B"> Buy
+                    <input type="radio" name="buy_rent" value="R"> Rent
+                    <input type="radio" name="buy_rent" value="Both"> Both
+                </div>
+                <button class="submit" type="submit">Submit</button>
+            </form>
+        </div>  
+    <footer></footer>
+</body>
+
+</html>
