@@ -30,7 +30,7 @@
     
     <div class="select">
             <h1 class="search_header">Search</h1>
-            <form action="/Buying_listvs" method="POST">
+            <form action="/Buying_list/" method="GET">
                 <div class="city_select_box">
                     <div class="contain">
                         <label class="topic" for="Country">Country</label>
@@ -47,18 +47,18 @@
                     </div>
                 </div>
                 <label for="type_select">Select Types</label><br>
-                    <input type="checkbox" value="H"><span class="product_type">House</span>
-                    <input type="checkbox" value="T"><span class="product_type">Townhouse</span>
-                    <input type="checkbox" value="C"><span class="product_type">Condo</span>
-                    <input type="checkbox" value="HT"><span class="haunted"> Haunted</span>
+                    <input type="checkbox" value="H"name = cb><span class="product_type">House</span>
+                    <input type="checkbox" value="T"name = cb1><span class="product_type">Townhouse</span>
+                    <input type="checkbox" value="C"name = cb2><span class="product_type">Condo</span>
+                    <input type="checkbox" value="HT"name = cb3><span class="haunted"> Haunted</span>
                     <br>
                 <label for="max_price">Max Price</label> 
-                <input type="text" id="max_price"><br>
+                <input type="text" id="max_price"name = max_price placeholder="100000"><br>
                 <label for="min_price">Min Price</label>
-                <input type="text" id="min_price"><br>
+                <input type="text" id="min_price"name = min_price placeholder="1"><br>
                 <div class="labeloption"id="brb">Option:<br>
-                    <input type="radio" name="buy_rent" value="Buy"> Buy
-                    <input type="radio" name="buy_rent" value="Rent"> Rent
+                    <input type="radio" name="buy_rent" value="B"> Buy
+                    <input type="radio" name="buy_rent" value="R"> Rent
                     <input type="radio" name="buy_rent" value="Both"> Both
                 </div>
                 <button type="submit">Submit</button>
