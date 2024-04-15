@@ -53,9 +53,10 @@ img {
     text-align: start;
     position: absolute; 
     width: 390px; 
-    height: 260px;
+    height: auto;
     left: 34%;
     z-index: 9999;
+
 }
 
 
