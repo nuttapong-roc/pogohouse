@@ -47,12 +47,21 @@ app.get('/Buying_list/:id',cors(), function (req, res) {
   return res.json(results);
   });
 });
-app.get('/Buying_lists',cors(), function (req, res) {
-    const { country, city, cb, cb1, cb2, cb3, max_price, min_price, buy_rent } = req.query;
+
+app.get('/Buying_lists', cors(), function (req, res) {
+    let { country, city, cb, cb1, cb2, cb3, max_price, min_price, buy_rent } = req.query;
     if (!country || !city || !cb || !cb1 || !cb2 || !cb3 || !max_price || !min_price || !buy_rent) {
         return res.status(400).send({ error: true, message: 'Please provide all parameters.' });
     }
-    dbconnect.query('SELECT p_id,p_name, p_price, picture1 FROM Product WHERE categories=?', buy_rent, function (error, results) {
+    if (buy_rent == "Both") {
+        buy_rent = ['R', 'B']; // Array of values
+    }
+    const sqlQuery = 'SELECT p_id, p_name, p_price, picture1 FROM Product WHERE ((p_city LIKE ?) OR (p_country LIKE ?)) AND (categories IN (?)) AND (p_type IN (?, ?, ?, ?)) AND (p_price BETWEEN ? AND ?)';
+    const queryParams = [`%${city}%`, `%${country}%`, buy_rent, cb, cb1, cb2, cb3, min_price, max_price];
+    console.log("SQL Query:", sqlQuery);
+    console.log("Parameters:", queryParams);
+    
+    dbconnect.query(sqlQuery, queryParams, function (error, results) {
         if (error) throw error;
         return res.json(results);
     });
