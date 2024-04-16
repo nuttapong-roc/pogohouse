@@ -10,17 +10,12 @@ const router = express.Router();
 dotenv.config();
 
 app.use("/", router);
-
-// router.get('/', (req, res) => {
-  //   res.send("Hello World! in plain text");
-  // })
 router.use(cp());
-
 router.use(express.json());
 router.use(express.urlencoded({extended:true}));
 
 // Read folder as a static file
-router.use(express.static(path.join(__dirname, '/../..', 'web programing')));
+router.use(express.static(path.join(__dirname, '/../..', 'pogohouse-main')));
 
 
 router.get('/', (req, res) => {
@@ -53,11 +48,6 @@ router.get('/search', (req, res) => {
   console.log(`Request at ${__dirname} \nRetrieve a search page`)
 });
 
-router.get('/Buying_listvs', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'html', 'Buying_Detail.html'));
-  console.log(`Request at ${__dirname} \nRetrieve a Buying_list page`)
-});
-
 
 
 // post
@@ -66,15 +56,62 @@ router.get('/login', (req, res) => {
   console.log(`Request at ${__dirname} \nRetrieve a login page`)
 });
 
+router.get('/c00kie/:id/:pass', (req, res) => {
+    let user = req.params.id;
+    let pass = req.params.pass;
+    res.cookie('cookie#1',user , {expire: 36000 + Date.now()});    
+    res.cookie('cookie#2',pass , {expire: 36000 + Date.now()});
+    res.redirect('/admin')
+});
+
 router.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'html', 'register.html'));
   console.log(`Request at ${__dirname} \nRetrieve a register page`)
 });
 
 
-// router.use((req, res, next) => {
-//   res.status(404).sendFile(path.join(`${__dirname}/error.html`));
-// })
+///////////////////////////////////////////////// Only Admin can access //////////////////////////////////////////////
+router.get('/admin', (req, res) => {
+  const cookie1 = req.cookies['cookie#1'];
+  const cookie2 = req.cookies['cookie#2']
+    if(cookie1 && cookie2){
+      res.sendFile(path.join(__dirname, '..', 'html_admin', 'home_admin.html'));
+      console.log(`Request at ${__dirname} \nRetrieve a admin page`)
+    }else{
+       res.redirect('/home')
+    }
+  });
+  
+  router.get('/admin_house_edit', (req, res) => {
+    const cookie1 = req.cookies['cookie#1'];
+    const cookie2 = req.cookies['cookie#2']
+      if(cookie1 && cookie2){
+        res.sendFile(path.join(__dirname, '..', 'html_admin', 'addHouse_admin.html'));
+        console.log(`Request at ${__dirname} \nRetrieve a admin house edit page`)
+      }else{
+         res.redirect('/home')
+    }
+  });
+  
+  // router.get('/admin_edit', (req, res) => {
+  //   const cookie1 = req.cookies['cookie#1'];
+  //   const cookie2 = req.cookies['cookie#2']
+  //     if(cookie1 && cookie2){
+  //       res.sendFile(path.join(__dirname, '..', 'html_admin', 'admin_edit.html'));
+  //       console.log(`Request at ${__dirname} \nRetrieve a admin edit page`)
+  //     }else{
+  //        res.redirect('/home')
+  //   }
+  // });
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  
+  // router.use((req, res, next) => {
+  //   res.status(404).sendFile(path.join(`${__dirname}/error.html`));
+  // })
+  
+  // Start the server
+
 
 // Start the server
 const port = 8026;
