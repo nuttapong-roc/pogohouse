@@ -1,0 +1,60 @@
+.header {
+    text-align: center;
+    color: aliceblue;
+}
+
+.select {
+    width: 800px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+
+input {
+    text-align: justify;
+}
+
+.admin_detail{
+    text-align: center;
+    padding-right: 80px;
+    
+}
+
+label {
+    font-size: 22px;
+    color: aliceblue;
+    margin: 5px
+}
+
+.contain{   
+    display: inline-flex;
+    justify-content: center;  
+    align-items: center; 
+}
+
+.topic{
+    width: 130px;
+}
+
+.selector {
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+}
+.submit {
+    display: block;
+    box-sizing: border-box;
+    margin: auto;
+    width: 50%;
+    max-width: 100px;
+    background: #fff;
+    background: rgb(167,201,173);
+    border-radius: 8px;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
