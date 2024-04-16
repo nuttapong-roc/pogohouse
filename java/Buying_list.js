@@ -3,15 +3,25 @@ function load5img()
  
     const para = new URLSearchParams(window.location.search);
     const type = para.get('type');
-    const country = para.get('country');
-    const city = para.get('city');
-    const cb = para.get('cb');
-    const cb1 = para.get('cb1');
-    const cb2 = para.get('cb2');
-    const cb3 = para.get('cb3');
-    const max_price = para.get('max_price');
-    const min_price = para.get('min_price');
-    const buy_rent = para.get('buy_rent');
+    let country = para.get('country');
+    let city = para.get('city');
+    let cb = para.get('cb');
+    let cb1 = para.get('cb1');
+    let cb2 = para.get('cb2');
+    let cb3 = para.get('cb3');
+    let max_price = para.get('max_price');
+    let min_price = para.get('min_price');
+    let buy_rent = para.get('buy_rent');
+
+    const setEmptyToNull = (value) => {
+        return value === "" ? null : value;
+    };
+
+    cb = setEmptyToNull(cb);
+    cb1 = setEmptyToNull(cb1);
+    cb2 = setEmptyToNull(cb2);
+    cb3 = setEmptyToNull(cb3);
+
     if (type!=null)
     {
         url = `http://localhost:8126/Buying_list/${type}`;
@@ -32,9 +42,6 @@ function load5img()
                 listproduct.innerHTML += "<div class='item'>" +
                 "<div class='forimg'>" +
                 "<img src="+ data[i].picture1 +">" +
-                "</div>" +
-                "<div class='overlay-image'>" +
-                "<img src='../pic/pog_star5.png' alt='Poggo House'>" +
                 "</div>" +
                 "<div id='name'>" + data[i].p_name + "</div>" +
                 "<div id='price'>$" + data[i].p_price + "</div>" +
