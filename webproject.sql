@@ -35,14 +35,15 @@ create table Admin (
     admin_id varchar(10) primary key,
     admin_fname varchar(20),
     admin_lname varchar(20),
+    admin_pass varchar(20),
     admin_startdate date
 );
 
-insert into Admin (admin_id, admin_fname, admin_lname, admin_startdate) 
-values	('AMD001', 'Apivich', 'Preedaarkaraphun', '2023-09-13'),
-		('AMD002', 'Pawat', 'Sukkasem', '2025-09-14'),
-		('AMD003', 'Nuttapong', 'Rochanavibhata', '2022-02-20'),
-		('AMD004', 'Attapong', 'Yaemananchai', '2028-04-09');
+insert into Admin
+values	('AMD001', 'Apivich', 'Preedaarkaraphun','1112', '2023-09-13'),
+		('AMD002', 'Pawat', 'Sukkasem','4444', '2025-09-14'),
+		('AMD003', 'Nuttapong', 'Rochanavibhata','4034', '2022-02-20'),
+		('AMD004', 'Attapong', 'Yaemananchai','1234', '2028-04-09');
 
 --
 
@@ -131,7 +132,7 @@ INSERT INTO Product
 VALUES	('PH_item_004', 'A tower', 'C', 30000000.00, 
 		'A tower is the condo that includes high technology in each room, and it has very strong security guards that are able to protect the universe.', 
 		'Newyork','USA', 'AMD001', 'R',
-        'https://github.com/nuttapong-roc/pogohouse/blob/3dcc3da0e7524e27d79cd05fcfe594280e4965c1/house%20pic/PH_item_004/PH_item_004_1.jpg?raw=true',
+        'https://github.com/nuttapong-roc/pogohouse/blob/30c864dc71835c87da832c7603b48a06119aca3a/house%20pic/PH_item_004/PH_item_004_1.png?raw=true',
         'https://github.com/nuttapong-roc/pogohouse/blob/3dcc3da0e7524e27d79cd05fcfe594280e4965c1/house%20pic/PH_item_004/PH_item_004_2.jpg?raw=true',
         'https://github.com/nuttapong-roc/pogohouse/blob/3dcc3da0e7524e27d79cd05fcfe594280e4965c1/house%20pic/PH_item_004/PH_item_004_3.jpg?raw=true',
         'https://github.com/nuttapong-roc/pogohouse/blob/3dcc3da0e7524e27d79cd05fcfe594280e4965c1/house%20pic/PH_item_004/PH_item_004_4.jpg?raw=true',
