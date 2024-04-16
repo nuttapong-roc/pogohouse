@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inclusive Sans", sans-serif;
+    background-image: url('https://github.com/nuttapong-roc/pogohouse/blob/e2bbcb25d39cf5b1101fe735cd05aabd548d3a7e/goodbg.png?raw=true');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header
+{
+	text-align: center;
+	padding: 20px;
+	font-size: 35px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+header a
+{
+    color: white;
+    text-decoration: none;
+}
+header:hover
+{
+	background-color: #EBDEF0 ;
+}
+ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li a.HE, li a.AE
+{
+	display: block;
+	text-align: center;
+	padding: 10px;
+	color:white;
+	text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+li a:hover
+{
+	background-color: #EBDEF0 ;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
