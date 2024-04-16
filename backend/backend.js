@@ -93,6 +93,101 @@ app.get('/House_Detail/:id',cors(), function (req, res) {
     return res.json(results);
     });
 });
+app.get('/login/:username/:password',cors(), function (req, res) {
+    let id = req.params.username;
+    let pass = req.params.password;
+    if (!id && !pass) {
+    return res.status(400).send({ error: true });
+    }
+    dbconnect.query('SELECT * FROM admin where admin_id = ? and admin_pass = ?', [id, pass], function (error, results) {
+    if (error) throw error;
+    return res.json(results);
+    });
+});
+
+
+//------------------------------------ Admin part ---------------------------------------
+
+// Insert
+app.post('/admin_house_edit',cors(), function (req, res) {
+    const { p_id, p_name, p_type, p_price, p_description, p_city, p_country, adminid, categories, picture1, picture2, picture3, picture4, picture5 } = req.query;
+    if (!p_id || !p_name || !p_type || !p_price || !p_description || !p_city || !p_country || !adminid || !categories || !picture1 || !picture2 || !picture3 || !picture4 || !picture5) {
+        return res.status(400).send({ error: true, message: 'Please provide all information.' });
+    }
+    let Product = { 
+            "Product" : {
+                "p_id" : p_id,
+                "p_name" : p_name,
+                "p_type" : p_type,
+                "p_price" : p_price,
+                "p_description" : p_description,
+                "p_city" : p_city,
+                "p_country" : p_country,
+                "adminid" : adminid,
+                "categories" : categories,
+                "picture1" : picture1,
+                "picture2" : picture2,
+                "picture3" : picture3,
+                "picture4" : picture4,
+                "picture5" : picture5,
+            }
+    };
+    dbconnect.query("INSERT INTO Product SET ? ", Product, function (error, results) {
+        if (error) throw error;
+        return res.json(results);
+    });
+});
+
+// // Delete
+app.delete('/admin_edit', function (req, res) {
+    let p_id = req.query.id;
+    if (!p_id) {
+        return res.status(400).send({ error: true, message: 'Please provide p_id' });
+    }
+    dbconnect.query('DELETE FROM Product WHERE p_id = ?', [p_id], function (error, results)
+    {
+    if (error) throw error;
+        return res.send({ error: false, data: results.affectedRows, message: 'Product has been deleted successfully.' });
+    });
+});
+
+// // Update
+app.put('/admin_house_edit', function (req, res) {
+    const { p_id, p_name, p_type, p_price, p_description, p_city, p_country, adminid, categories, picture1, picture2, picture3, picture4, picture5 } = req.query;
+    if (!p_id || !p_name || !p_type || !p_price || !p_description || !p_city || !p_country || !adminid || !categories || !picture1 || !picture2 || !picture3 || !picture4 || !picture5) {
+        return res.status(400).send({ error: true, message: 'Please provide all information.' });
+    }
+    let Product = { 
+            "Product" : {
+                "p_id" : p_id,
+                "p_name" : p_name,
+                "p_type" : p_type,
+                "p_price" : p_price,
+                "p_description" : p_description,
+                "p_city" : p_city,
+                "p_country" : p_country,
+                "adminid" : adminid,
+                "categories" : categories,
+                "picture1" : picture1,
+                "picture2" : picture2,
+                "picture3" : picture3,
+                "picture4" : picture4,
+                "picture5" : picture5,
+            }
+    };
+    let ID = req.body.student.student_id;
+    // let student = req.body.student;
+    if (!student_id || !student) {
+        return res.status(400).send({ error: student, message: 'Please provide Product information' });
+    }
+    dbconnect.query("UPDATE student SET ? WHERE STU_ID = ?", [Product, ID], function (error,
+    results) {
+    if (error) throw error;
+        return res.send({error: false, data: results.affectedRows, message: 'Product has been updated successfully.'})
+    });
+});
+
+// ---------------------------------------------------------------------------------------
 
 dbconnect.connect(function(err)
 {
