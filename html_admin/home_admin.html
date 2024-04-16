@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/admin.css" />
+</head>
+
+<body>
+    <header><a href="#" >House's Website</a></header>
+    <nav>
+		<ul>
+			<li><a class="HE" href="#">House_edit</a></li>
+			<li><a class="AE" href="#">Admin_edit</a></li>
+		</ul>
+	</nav>
+    <selection>
+        <div class="container">
+            <h2 class="option_color option_flex">Option</h2>
+            <div class="filter_bar option_flex">
+
+                <form class="input-group lg-3" action="/form-submit" method="post">
+                    <select class="form-select" id="ddl" name="select_choice">
+                        <option selected>Select</option>
+                        <option value="user">User</option>
+                        <option value="id">House ID</option>
+                        <option value="Hname">House name</option>
+                    </select>
+                    <input class="input" type="text" id="search_value">
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </selection>
+
+    <div class="listproduct" id="testing">
+
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>
