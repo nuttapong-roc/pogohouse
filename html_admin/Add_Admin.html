@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Add Admin
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Add_admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    
+    <style>
+        .input {
+            color: blue;
+        }
+    </style>    
+</head>
+
+<body>
+    
+    <header><a href="#" >House's Website</a></header>
+    <nav>
+		<ul>
+			<li><a class="HE" href="#">House_edit</a></li>
+			<li><a class="AE" href="#">Admin_edit</a></li>
+		</ul>
+	</nav>
+    
+    <div class="select">
+            <h1 class="header">Add Admin</h1>
+            <form action="/Add_admin/" method="POST">
+                <div class="admin_detail">
+                    <div class="contain">
+                        <label class="topic" for="admin_ID">Admin ID</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="adminID" name="adminid"
+                            placeholder="AMDxxx">
+                    </div>
+                    <br><br>
+                    <div class="contain">
+                        <label class="topic" for="fname">First name</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="fname" name="first ame"
+                            placeholder="Your first name"> 
+                    </div>
+                    <br><br>
+
+                    <div class="contain">
+                        <label class="topic" for="lname">Last name</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="lname" name="last ame"
+                            placeholder="Your last name"> 
+                    </div>
+                    <br><br>
+                    <label for="start_date">Start Date:</label>
+                    <input type="date" id="st_date" name="start_date">
+                </div>
+                <br>
+                <button class="submit" type="submit">Add</button>
+            </form>
+        </div>  
+    <footer></footer>
+</body>
+
+</html>
