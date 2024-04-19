@@ -177,9 +177,9 @@ app.put('/admin_house_edit', function (req, res) {
     };
     let ID = req.body.Product.p_id;
     // let student = req.body.student;
-    if (!student_id || !student) {
-        return res.status(400).send({ error: student, message: 'Please provide Product information' });
-    }
+    //if (!student_id || !student) {
+    //   return res.status(400).send({ error: student, message: 'Please provide Product information' });
+//    }
     dbconnect.query("UPDATE Product SET ? WHERE p_id = ?", [Product, ID], function (error,
     results) {
     if (error) throw error;
