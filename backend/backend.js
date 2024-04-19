@@ -175,12 +175,12 @@ app.put('/admin_house_edit', function (req, res) {
                 "picture5" : picture5,
             }
     };
-    let ID = req.body.student.student_id;
+    let ID = req.body.Product.p_id;
     // let student = req.body.student;
     if (!student_id || !student) {
         return res.status(400).send({ error: student, message: 'Please provide Product information' });
     }
-    dbconnect.query("UPDATE student SET ? WHERE STU_ID = ?", [Product, ID], function (error,
+    dbconnect.query("UPDATE Product SET ? WHERE p_id = ?", [Product, ID], function (error,
     results) {
     if (error) throw error;
         return res.send({error: false, data: results.affectedRows, message: 'Product has been updated successfully.'})
