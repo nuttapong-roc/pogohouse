@@ -54,7 +54,7 @@ app.get('/Buying_lists', cors(), function (req, res) {
         return res.status(400).send({ error: true, message: 'Please provide all parameters.' });
     }
     if (buy_rent == "Both") {
-        buy_rent = ['R', 'B']; // Array of values
+        buy_rent = ['R', 'B'];
     }
     const sqlQuery = 'SELECT p_id, p_name, p_price, picture1 FROM Product WHERE ((p_city LIKE ?) OR (p_country LIKE ?)) AND (categories IN (?)) AND (p_type IN (?, ?, ?, ?)) AND (p_price BETWEEN ? AND ?)';
     const queryParams = [`%${city}%`, `%${country}%`, buy_rent, cb, cb1, cb2, cb3, min_price, max_price];
@@ -175,12 +175,12 @@ app.put('/admin_house_edit', function (req, res) {
                 "picture5" : picture5,
             }
     };
-    let ID = req.body.Product.p_id;
+    let ID = req.body.student.student_id;
     // let student = req.body.student;
-    //if (!student_id || !student) {
-    //   return res.status(400).send({ error: student, message: 'Please provide Product information' });
-//    }
-    dbconnect.query("UPDATE Product SET ? WHERE p_id = ?", [Product, ID], function (error,
+    if (!student_id || !student) {
+        return res.status(400).send({ error: student, message: 'Please provide Product information' });
+    }
+    dbconnect.query("UPDATE student SET ? WHERE STU_ID = ?", [Product, ID], function (error,
     results) {
     if (error) throw error;
         return res.send({error: false, data: results.affectedRows, message: 'Product has been updated successfully.'})
