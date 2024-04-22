@@ -93,25 +93,8 @@ router.get('/admin', (req, res) => {
     }
   });
   
-  // router.get('/admin_edit', (req, res) => {
-  //   const cookie1 = req.cookies['cookie#1'];
-  //   const cookie2 = req.cookies['cookie#2']
-  //     if(cookie1 && cookie2){
-  //       res.sendFile(path.join(__dirname, '..', 'html_admin', 'admin_edit.html'));
-  //       console.log(`Request at ${__dirname} \nRetrieve a admin edit page`)
-  //     }else{
-  //        res.redirect('/home')
-  //   }
-  // });
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-  
-  // router.use((req, res, next) => {
-  //   res.status(404).sendFile(path.join(`${__dirname}/error.html`));
-  // })
-  
-  // Start the server
-
 
 // Start the server
 const port = 8026;
