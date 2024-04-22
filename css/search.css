@@ -7,7 +7,7 @@
     width: 800px;
     height: auto;
     text-align: center;
-    margin: 30px auto;
+    margin: auto;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(15px);
@@ -16,25 +16,24 @@
 
 .haunted {
     font-family: ghas;
-    font-size: 22px;
+    font-size: 22px ;
     color: red;
     text-shadow: 1px 1px black;
     font-family: "Creepster", system-ui
 }
-
 input {
     text-align: justify;
 }
 
-.labeloption {
+.labeloption  {
     width: 100%;
     color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-#brb {
+#brb
+{
     padding-bottom: 20px;
 }
 
@@ -42,14 +41,14 @@ input {
     margin-top: 10px;
 }
 
-.city_select_box {
+.city_select_box{
     text-align: center;
     /* padding-bottom: 30px; */
     padding-right: 80px;
-
+    
 }
 
-.product_type {
+.product_type{
     color: aqua;
 }
 
@@ -59,22 +58,20 @@ label {
     margin: 5px
 }
 
-.contain {
+.contain{   
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;  
+    align-items: center; 
 }
 
-.topic {
+.topic{
     width: 130px;
 }
-
 .selector {
     font-size: 18px;
     text-align: center;
     display: flex;
 }
-
 .submit {
     display: block;
     box-sizing: border-box;
@@ -82,7 +79,7 @@ label {
     width: 50%;
     max-width: 100px;
     background: #fff;
-    background: rgb(167, 201, 173);
+    background: rgb(167,201,173);
     border-radius: 8px;
     color: #fff;
     align-items: center;
@@ -100,11 +97,4 @@ label {
     font-size: 14px;
     text-align: center;
     display: flex;
-}
-
-.warning {
-    color: red;
-    text-align: center;
-    font-size: 12px;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
