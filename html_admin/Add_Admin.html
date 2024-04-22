@@ -29,7 +29,6 @@
     
     <div class="select">
             <h1 class="header">Add Admin</h1>
-            <form action="/Add_admin/" method="POST">
                 <div class="admin_detail">
                     <div class="contain">
                         <label class="topic" for="admin_ID">Admin ID</label>
@@ -38,15 +37,21 @@
                     </div>
                     <br><br>
                     <div class="contain">
+                        <label class="topic" for="admin_ID">Password</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="password" name="password"
+                            placeholder="Password">
+                    </div>
+                    <br><br>
+                    <div class="contain">
                         <label class="topic" for="fname">First name</label>
-                        <input style="width: 500px; height: 25px;" class='selector' id="fname" name="first ame"
+                        <input style="width: 500px; height: 25px;" class='selector' id="fname" name="firstName"
                             placeholder="Your first name"> 
                     </div>
                     <br><br>
 
                     <div class="contain">
                         <label class="topic" for="lname">Last name</label>
-                        <input style="width: 500px; height: 25px;" class='selector' id="lname" name="last ame"
+                        <input style="width: 500px; height: 25px;" class='selector' id="lname" name="lastName"
                             placeholder="Your last name"> 
                     </div>
                     <br><br>
@@ -54,8 +59,10 @@
                     <input type="date" id="st_date" name="start_date">
                 </div>
                 <br>
-                <button class="submit" type="submit">Add</button>
-            </form>
+                <button class="submit_admin" type="submit" id="post">Insert</button>
+                <button class="submit_admin" type="submit" id="put">Update</button>
+                <button class="submit_admin" type="submit" id="delete">Delete</button>            
+            <!-- </form> -->
         </div>  
     <footer></footer>
 </body>
