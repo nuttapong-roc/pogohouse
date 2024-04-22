@@ -15,10 +15,15 @@ function myFunction() {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
-        if (data.length > 0)
+        console.log(data);
+        console.log(data[0].adminid);
+        if (data[0].adminid != null)
         {
             window.location.href = `/c00kie/${username}/${password}`;
+        }
+        if (data[0].adminid == null)
+        {
+            window.location.href = "/";
         }
             
     })
