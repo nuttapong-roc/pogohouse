@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Add Admin
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Add_admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../java/CRUD_user.js"></script>
+    
+    <style>
+        .input {
+            color: blue;
+        }
+    </style>    
+</head>
+
+<body>
+    
+    <header><a href="/admin" >House's Website</a></header>
+    <nav>
+		<ul>
+			<li><a class="HE" href="/admin_house_edit">House_edit</a></li>
+			<li><a class="AE" href="/admin_edit">Admin_edit</a></li>
+		</ul>
+	</nav>
+    
+    <div class="select">
+            <h1 class="header">Add Admin</h1>
+                <div class="admin_detail">
+                    <div class="contain">
+                        <label class="topic" for="acc_id">User ID:</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="acc_id" name="acc_id"
+                            placeholder="PHxxx">
+                    </div>
+                    <br><br>
+                    <div class="contain">
+                        <label class="topic" for="password">Password:</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="password" name="password"
+                            placeholder="password"> 
+                    </div>
+                    <br><br>
+                    <div class="contain">
+                        <label class="topic" for="accountname">User Name:</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="accountname" name="accountname"
+                            placeholder="your user name"> 
+                    </div>
+                    <br><br>
+                    <div class="contain">
+                        <label class="topic" for="location">Location:</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="location" name="location"
+                            placeholder="location">
+                    </div>
+
+                    <br><br>
+                    <div class="contain">
+                        <label class="topic" for="email">Email:</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="email" name="email"
+                            placeholder="email"> 
+                    </div>
+                    
+                    <br><br>
+                    <div class="contain">
+                        <label class="topic" for="contact">Contact:</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="contact" name="contact"
+                            placeholder="contact"> 
+                    </div>
+                    
+                    
+                    <br><br>
+                    <div class="contain">
+                        <label class="topic" for="adminid">Adminid:</label>
+                        <input style="width: 500px; height: 25px;" class='selector' id="adminid" name="adminid"
+                            placeholder="If have please provide"> 
+                    </div>
+
+                </div>
+                <br>
+                <button class="submit_admin" type="submit" id="post">Insert</button>
+                <button class="submit_admin" type="submit" id="put">Update</button>
+                <button class="submit_admin" type="submit" id="delete">Delete</button>            
+            <!-- </form> -->
+        </div>  
+    <footer></footer>
+</body>
+
+</html>
