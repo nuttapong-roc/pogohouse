@@ -54,8 +54,9 @@ app.get('/Buying_list/:id',cors(), function (req, res) {
 
 app.get('/Buying_lists', cors(), function (req, res) {
     let { country, city, cb, cb1, cb2, cb3, max_price, min_price, buy_rent } = req.query;
-    if (!country || !city || !cb || !cb1 || !cb2 || !cb3 || !max_price || !min_price || !buy_rent) {
-        return res.status(400).send({ error: true, message: 'Please provide all parameters.' });
+    if (!country || !city || !cb || !cb1 || !cb2 || !cb3 || !max_price || !min_price || !buy_rent) //if not enter all or some redirect
+    {
+        return res.redirect('/Buying_list');
     }
     if (buy_rent == "Both") {
         buy_rent = ['R', 'B']; // Array of values
