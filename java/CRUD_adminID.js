@@ -12,9 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function myFunctionPost() {
   
         const adminid = document.querySelector('input[name="adminid"]').value;
-
         const password = document.querySelector('input[name="password"]').value;
-
         const firstName = document.querySelector('input[name="firstName"]').value;
         const lastName = document.querySelector('input[name="lastName"]').value;
         const start_date = document.querySelector('input[name="start_date"]').value;
@@ -26,12 +24,13 @@ function myFunctionPost() {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({ 
-            admin_id: adminid,
-            admin_pass: password,
-            admin_fname: firstName,
-            admin_lname: lastName,
-            admin_startdate: start_date
-
+            Admin:{
+              admin_id: adminid,
+              admin_pass: password,
+              admin_fname: firstName,
+              admin_lname: lastName,
+              admin_startdate: start_date
+            }
           }),
         })
           .then(response => response.json())
@@ -57,11 +56,13 @@ function myFunctionPut() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ 
-      admin_id: adminid,
-      admin_pass: password,
-      admin_fname: firstName,
-      admin_lname: lastName,
-      admin_startdate: start_date
+      Admin:{
+        admin_id: adminid,
+        admin_pass: password,
+        admin_fname: firstName,
+        admin_lname: lastName,
+        admin_startdate: start_date
+      }
 
     }),
   })
@@ -76,24 +77,16 @@ function myFunctionPut() {
 function myFunctionDelete() {
   
   const adminid = document.querySelector('input[name="adminid"]').value;
-  const password = document.querySelector('input[name="password"]').value;
-  const firstName = document.querySelector('input[name="firstName"]').value;
-  const lastName = document.querySelector('input[name="lastName"]').value;
-  const start_date = document.querySelector('input[name="start_date"]').value;
 
-  
   fetch('http://localhost:8126/admin/edit_id', {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ 
-      admin_id: adminid,
-      admin_pass: password,
-      admin_fname: firstName,
-      admin_lname: lastName,
-      admin_startdate: start_date
-
+      Admin:{
+        admin_id: adminid      
+      }
     }),
   })
     .then(response => response.json())
