@@ -3,6 +3,7 @@ function load5img()
  
     const para = new URLSearchParams(window.location.search);
     const type = para.get('type');
+    
     let country = para.get('country');
     let city = para.get('city');
     let cb = para.get('cb');
