@@ -4,30 +4,32 @@
 <head>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/admin.css" />
+    <script src="../java/homeadmin.js"></script>
 </head>
 
 <body>
     <header><a href="/admin" >House's Website</a></header>
     <nav>
 		<ul>
-			<li><a class="HE" href="/admin_house_edit">House_edit</a></li>
-			<li><a class="AE" href="/admin_edit">Admin_edit</a></li>
+			<li><a class="HE" href="/admin_house_edit">House edit</a></li>
+			<li><a class="AE" href="/admin_edit">Admin ID edit</a></li>
+            <li><a class="AE" href="/admin_editUser">User edit</a></li>
 		</ul>
 	</nav>
     <selection>
         <div class="container">
             <h2 class="option_color option_flex" style="color: white;">Option</h2>
             <div class="filter_baroption_flex">
-
-                <form class="input-group lg-3" action="/" method="GET">
+                <div class="input-group lg-3">
                     <select class="form-select" id="ddl" name="select_choice">
                         <option selected>Select</option>
-                        <option value="id">House ID</option>
-                        <option value="Hname">Admin ID</option>
+                        <option value="HID">House ID</option>
+                        <option value="AID">Admin ID</option>
+                        <option value="UID">User ID</option>
                     </select>
                     <input class="input" type="text" id="search_value">
-                    <button class="submit" type="submit">Submit</button>
-                </form>
+                    <button class="submit" type="submit" name="submit" id="submit">Submit</button>
+                </div>
             </div>
         </div>
     </selection>
