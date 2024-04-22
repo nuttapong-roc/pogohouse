@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Add House
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <!-- JAVA -->
+    <script src="../java/CRUD.js"></script>
+    <style>
+        .input {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header><a href="/admin" >House's Website</a></header>
+    <nav>
+		<ul>
+			<li><a class="HE" href="/admin_house_edit">House_edit</a></li>
+			<li><a class="AE" href="/admin_edit">Admin_edit</a></li>
+		</ul>
+	</nav>
+
+    <div class="select">
+        <h1 class="search_header">Add a House</h1>
+        <!-- <form action="/admin_edit_house/" method="POST"> -->
+            <div class="city_select_box">
+                <div class="contain">
+                    <label class="topic" for="ID">House ID</label>
+                    <input style="width: 500px; height: 25px;" class='selector' id="ID" name="id"
+                        placeholder="PH_item_xxx">
+                </div>
+                <div class="contain">
+                    <label class="topic" for="Hname">House name</label>
+                    <input style="width: 500px; height: 25px;" class='selector' id="hname" name="name"
+                        placeholder="house name">
+                </div>
+                <div class="contain">
+                    <label class="topic" for="Country">Country</label>
+                    <input style="width: 500px; height: 25px;" class='selector' id="Country" name="country"
+                        placeholder="England">
+                </div>
+                <br><br>
+                <div class="contain">
+                    <label class="topic" for="City">City</label>
+                    <input style="width: 500px; height: 25px;" class='selector' id="City" name="city"
+                        placeholder="London">
+                </div>
+                <br><br>
+                <div class="contain">
+                    <label class="topic" for="description" id="desc">Description</label>
+                    <input style="width: 500px; height: 25px;" class='textbox' id="description" name="Description"
+                        placeholder="detail">
+                </div>
+            </div>
+            <label for="type_select">Select Types</label><br>
+            <input type="radio" value="H" name="choice"><span class="product_type">House</span>
+            <input type="radio" value="T" name="choice"><span class="product_type">Townhouse</span>
+            <input type="radio" value="C" name="choice"><span class="product_type">Condo</span>
+            <input type="radio" value="HT" name="choice"><span class="haunted">Haunted</span>
+
+            <br>
+            <label for="price">Price</label>
+            <input type="text" id="set_price" name=price placeholder="10,000"><br>
+            <div class="labeloption" id="brb">Option:<br>
+                <input type="radio" name="buy_rent" value="B"> Buy
+                <input type="radio" name="buy_rent" value="R"> Rent
+            </div>
+            <div class="city_select_box">
+                <div class="contain">
+                    <label class="topic" for="Country">Pic1</label>
+                    <input style="width: 400px; height: 15px;" class='addlink' id="pic" name="pic1"
+                        placeholder="put link of picture">
+                </div>
+                <div class="contain">
+                    <label class="topic" for="Country">Pic2</label>
+                    <input style="width: 400px; height: 15px;" class='addlink' id="pic" name="pic2"
+                        placeholder="put link of picture">
+                </div>
+                <div class="contain">
+                    <label class="topic" for="Country">Pic3</label>
+                    <input style="width: 400px; height: 15px;" class='addlink' id="pic" name="pic3"
+                        placeholder="put link of picture">
+                </div>
+                <div class="contain">
+                    <label class="topic" for="Country">Pic4</label>
+                    <input style="width: 400px; height: 15px;" class='addlink' id="pic" name="pic4"
+                        placeholder="put link of picture">
+                </div>
+                <div class="contain">
+                    <label class="topic" for="Country">Pic5</label>
+                    <input style="width: 400px; height: 15px;" class='addlink' id="pic" name="pic5"
+                        placeholder="put link of picture">
+                </div>
+                <div class="contain">
+                    <label class="topic" for="Country">Admin ID</label>
+                    <input style="width: 150px; height: 15px;" class='addlink' id="ADMINID" name="adminId"
+                        placeholder="AMDxxx">
+                </div>
+            </div>
+            <button class="submit_admin" type="submit" id="post">Insert</button>
+            <button class="submit_admin" type="submit" id="put">Update</button>
+            <button class="submit_admin" type="submit" id="delete">Delete</button>
+        <!-- </form> -->
+    </div>
+    <footer></footer>
+</body>
+
+</html>
