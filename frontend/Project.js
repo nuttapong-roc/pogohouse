@@ -93,7 +93,29 @@ router.get('/admin', (req, res) => {
     }
   });
   
+  router.get('/admin_edit', (req, res) => {
+    const cookie1 = req.cookies['cookie#1'];
+    const cookie2 = req.cookies['cookie#2']
+      if(cookie1 && cookie2){
+        res.sendFile(path.join(__dirname, '..', 'html_admin', 'Add_Admin.html'));
+        console.log(`Request at ${__dirname} \nRetrieve a admin edit page`)
+      }else{
+         res.redirect('/home')
+    }
+  });
+
+  router.get('/admin_editUser', (req, res) => {
+    const cookie1 = req.cookies['cookie#1'];
+    const cookie2 = req.cookies['cookie#2']
+      if(cookie1 && cookie2){
+        res.sendFile(path.join(__dirname, '..', 'html_admin', 'add_user.html'));
+        console.log(`Request at ${__dirname} \nRetrieve a admin edit user page`)
+      }else{
+         res.redirect('/home')
+    }
+  });
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
   
 
 // Start the server
@@ -101,4 +123,3 @@ const port = 8026;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
