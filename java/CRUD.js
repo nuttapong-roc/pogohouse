@@ -16,8 +16,8 @@ function myFunctionPost() {
         const country = document.querySelector('input[name="country"]').value;
         const city = document.querySelector('input[name="city"]').value;
         const Description = document.querySelector('input[name="Description"]').value;
-        const choice = document.querySelector('input[name="choice"]').value;
-        const buy_rent = document.querySelector('input[name="buy_rent"]').value;
+        const choice = document.querySelector('input[name="choice"]:checked').value;
+        const buy_rent = document.querySelector('input[name="buy_rent"]:checked').value;
         const price = document.querySelector('input[name="price"]').value;
         const admin = document.querySelector('input[name="adminId"]').value;
         const Pic1 = document.querySelector('input[name="pic1"]').value;
@@ -65,8 +65,8 @@ function myFunctionPut() {
   const country = document.querySelector('input[name="country"]').value;
   const city = document.querySelector('input[name="city"]').value;
   const Description = document.querySelector('input[name="Description"]').value;
-  const choice = document.querySelector('input[name="choice"]').value;
-  const buy_rent = document.querySelector('input[name="buy_rent"]').value;
+  const choice = document.querySelector('input[name="choice"]:checked').value;
+  const buy_rent = document.querySelector('input[name="buy_rent"]:checked').value;
   const price = document.querySelector('input[name="price"]').value;
   const admin = document.querySelector('input[name="adminId"]').value;
   const Pic1 = document.querySelector('input[name="pic1"]').value;
