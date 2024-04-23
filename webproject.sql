@@ -13,7 +13,8 @@ USE `Pogohouse`;
 
 
 -- --------------------------------------------------------
-create table Admin (
+drop table if exists Admin;
+create table if not exists Admin (
     admin_id varchar(10) primary key,
     admin_fname varchar(20),
     admin_lname varchar(20),
@@ -28,8 +29,8 @@ values	('AMD001', 'Apivich', 'Preedaarkaraphun','1112', '2023-09-13'),
 		('AMD004', 'Attapong', 'Yaemananchai','1234', '2028-04-09');
 
 --
-
-CREATE TABLE Account (
+drop table if exists Account;
+CREATE TABLE if not exists Account (
   acc_id varchar(10) NOT NULL,
   location varchar(30) NOT NULL,
   email varchar(30) NOT NULL,
@@ -59,8 +60,8 @@ INSERT INTO Account (acc_id, location, email, contact, password, accountname, ad
 -- --------------------------------------------------------
 -- Table structure for table Transaction
 --
-
-create table Product (
+drop table if exists Product;
+create table if not exists Product (
 	p_id varchar(15) primary key,
     p_name varchar(30),
     p_type char(2),
