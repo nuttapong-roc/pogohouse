@@ -175,7 +175,7 @@ app.put('/admin/edit_product', function (req, res) {
     let product = req.body.Product;
     
     if (!product_id || !product || !product.p_name || !product.p_type || !product.p_price || !product.p_description || !product.p_city || !product.p_country || !product.adminid || !product.categories || !product.picture1 || !product.picture2 || !product.picture3 || !product.picture4 || !product.picture5) {
-        return res.status(400).send({ error: student, message: 'Please provide Product information' });
+        return res.status(400).send({ error: true, message: 'Please provide Product information' });
     }
     dbconnect.query("UPDATE Product SET ? WHERE p_id = ?", [product, product_id], function (error,results) {
     if (error) throw error;
@@ -220,7 +220,7 @@ app.put('/admin/edit_id', function (req, res) {
     let Admin_id = req.body.Admin.admin_id;
     let Admin = req.body.Admin;
     if (!Admin_id || !Admin || !Admin.admin_fname || !Admin.admin_lname || !Admin.admin_pass || !Admin.admin_startdate) {
-        return res.status(400).send({ error: student, message: 'Please provide admin information' });
+        return res.status(400).send({ error: true, message: 'Please provide admin information' });
     }
     dbconnect.query("UPDATE Admin SET ? WHERE admin_id = ?", [Admin, Admin_id], function (error,results) {
     if (error) throw error;
@@ -235,7 +235,7 @@ app.post('/admin/edit_user',cors(), function (req, res) {
   
     let Account = req.body.User;
     console.log(Account);
-    if (!Account || !Account.acc_id || !Account.location || !Account.email || !Account.contact || !Account.password || !Account.accountname || !Account.adminid) {
+    if (!Account || !Account.acc_id || !Account.location || !Account.email || !Account.contact || !Account.password || !Account.accountname) {
         return res.status(400).send({ error: true, message: 'Please provide all information.' });
     }
     dbconnect.query("INSERT INTO Account SET ? ", Account, function (error, results) {
@@ -263,8 +263,8 @@ app.delete('/admin/edit_user', function (req, res) {
 app.put('/admin/edit_user', function (req, res) {
     let Account_id = req.body.User.acc_id;
     let Account = req.body.User;
-    if (!Account_id || !Account || !Account.location || !Account.email || !Account.contact || !Account.password || !Account.accountname || !Account.adminid) {
-        return res.status(400).send({ error: student, message: 'Please provide Account information' });
+    if (!Account_id || !Account || !Account.location || !Account.email || !Account.contact || !Account.password || !Account.accountname ) {
+        return res.status(400).send({ error: true, message: 'Please provide Account information' });
     }
     dbconnect.query("UPDATE Account SET ? WHERE acc_id = ?", [Account, Account_id], function (error,results) {
     if (error) throw error;
