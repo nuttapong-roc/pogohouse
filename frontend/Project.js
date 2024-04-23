@@ -1,13 +1,11 @@
 const express = require('express');
 const path = require('path');
 
-const dotenv = require("dotenv");
 
 const cp = require("cookie-parser");
 const app = express();
 const router = express.Router();
 
-dotenv.config();
 
 app.use("/", router);
 router.use(cp());
