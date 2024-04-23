@@ -54,7 +54,7 @@ function myFunctionPost() {
           .then(data => console.log(data))
           .catch(error => console.error('Error:', error));
 
-          window.location.href = `/admin_house_edit` 
+          window.location.reload();
 }
 
 //      PUT/UPDATE
@@ -103,7 +103,7 @@ function myFunctionPut() {
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
-    window.location.href = `/admin_house_edit` 
+    window.location.reload();
 }
 
 //      DELETE
@@ -126,5 +126,5 @@ function myFunctionDelete() {
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
-    window.location.href = `/admin_house_edit` 
+    window.location.reload();
 }

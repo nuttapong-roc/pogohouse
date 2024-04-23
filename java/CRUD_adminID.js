@@ -26,9 +26,9 @@ function myFunctionPost() {
           body: JSON.stringify({ 
             Admin:{
               admin_id: adminid,
-              admin_pass: password,
               admin_fname: firstName,
               admin_lname: lastName,
+              admin_pass: password,
               admin_startdate: start_date
             }
           }),
@@ -37,7 +37,7 @@ function myFunctionPost() {
           .then(data => console.log(data))
           .catch(error => console.error('Error:', error));
 
-          window.location.href = `/admin_edit` 
+          window.location.reload();
 }
 
 //      PUT/UPDATE
@@ -58,9 +58,9 @@ function myFunctionPut() {
     body: JSON.stringify({ 
       Admin:{
         admin_id: adminid,
-        admin_pass: password,
         admin_fname: firstName,
         admin_lname: lastName,
+        admin_pass: password,
         admin_startdate: start_date
       }
 
@@ -70,7 +70,7 @@ function myFunctionPut() {
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
-    window.location.href = `/admin_edit`
+    window.location.reload();
 }
 
 //      DELETE
@@ -93,5 +93,5 @@ function myFunctionDelete() {
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
-    window.location.href = `/admin_edit`
+    window.location.reload();
 }
