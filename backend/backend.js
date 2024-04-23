@@ -173,7 +173,6 @@ app.delete('/admin/edit_product', function (req, res) {
 app.put('/admin/edit_product', function (req, res) {
     let product_id = req.body.Product.p_id;
     let product = req.body.Product;
-    
     if (!product_id || !product || !product.p_name || !product.p_type || !product.p_price || !product.p_description || !product.p_city || !product.p_country || !product.adminid || !product.categories || !product.picture1 || !product.picture2 || !product.picture3 || !product.picture4 || !product.picture5) {
         return res.status(400).send({ error: true, message: 'Please provide Product information' });
     }
@@ -235,7 +234,7 @@ app.post('/admin/edit_user',cors(), function (req, res) {
   
     let Account = req.body.User;
     console.log(Account);
-    if (!Account || !Account.acc_id || !Account.location || !Account.email || !Account.contact || !Account.password || !Account.accountname) {
+    if (!Account || !Account.acc_id || !Account.location || !Account.email || !Account.contact || !Account.password || !Account.accountname || !Account.adminid) {
         return res.status(400).send({ error: true, message: 'Please provide all information.' });
     }
     dbconnect.query("INSERT INTO Account SET ? ", Account, function (error, results) {
@@ -263,8 +262,8 @@ app.delete('/admin/edit_user', function (req, res) {
 app.put('/admin/edit_user', function (req, res) {
     let Account_id = req.body.User.acc_id;
     let Account = req.body.User;
-    if (!Account_id || !Account || !Account.location || !Account.email || !Account.contact || !Account.password || !Account.accountname ) {
-        return res.status(400).send({ error: true, message: 'Please provide Account information' });
+    if (!Account_id || !Account || !Account.location || !Account.email || !Account.contact || !Account.password || !Account.accountname || !Account.adminid) {
+        return res.status(400).send({ error: student, message: 'Please provide Account information' });
     }
     dbconnect.query("UPDATE Account SET ? WHERE acc_id = ?", [Account, Account_id], function (error,results) {
     if (error) throw error;
